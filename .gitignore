@@ -1,0 +1,19 @@
+# Secrets / local environment
+.env
+.env.*
+!.env.example
+*.secret
+secrets.*
+wrangler.toml
+.dev.vars
+
+# Dependencies / build output
+node_modules/
+dist/
+build/
+
+# Editors / operating system
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
