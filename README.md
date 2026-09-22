@@ -21,23 +21,32 @@ Users without LocalProfileEditor will continue to see the normal Discord profile
 
 ## Installation
 
-This is a Vencord **userplugin**, so a Vencord source installation is required.
+LocalProfileEditor is a Vencord **userplugin**, so a Vencord source installation is required.
 
-1. Place the plugin source in:
-   `Vencord/src/userplugins/LocalProfileEditor/`
-2. Build Vencord.
-3. Inject/reinstall the built Vencord version as required by your setup.
-4. Enable **LocalProfileEditor** in Vencord's Plugins settings.
+### Recommended installation
 
-The plugin source files are in the `src/` directory of this repository.
+1. Download `LocalProfileEditorv1.0.1.zip` from the latest GitHub Release.
+2. Extract the ZIP.
+3. Place the `LocalProfileEditor` folder inside:
+   `Vencord/src/userplugins/`
+4. Open a terminal in your Vencord folder and build Vencord:
+   `pnpm build`
+5. Inject/reinstall Vencord if required:
+   `pnpm inject`
+6. Restart Discord.
+7. Open **Settings → Vencord → Plugins** and enable **LocalProfileEditor**.
 
-## Shared profiles
+The final structure should look like:
 
-Viewing shared profiles does not require authentication.
+`Vencord/src/userplugins/LocalProfileEditor/index.tsx`
 
-To publish your own shared profile, authenticate through the LocalProfileEditor Discord OAuth flow and paste the token returned for that Discord account into the plugin's **Sync Token** setting.
+`Vencord/src/userplugins/LocalProfileEditor/native.ts`
 
-Each Discord account has its own token. Never share your sync token.
+### Manual installation
+
+Alternatively, copy `src/index.tsx` and `src/native.ts` from this repository into:
+
+`Vencord/src/userplugins/LocalProfileEditor/`
 
 ## Server
 
