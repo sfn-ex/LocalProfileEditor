@@ -79,7 +79,3 @@ CREATE TABLE profiles (
 The public profile endpoint exposes profile customization data that a user has published, indexed by Discord user ID. OAuth is used to verify that a user can publish only to their own Discord ID.
 
 Sync tokens and Discord/Cloudflare secrets must never be committed to the repository.
-
-## Creator
-
-sxfo
